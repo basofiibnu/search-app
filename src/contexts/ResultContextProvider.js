@@ -6,7 +6,7 @@ const baseUrl = 'https://google-search3.p.rapidapi.com/api/v1';
 export const ResultContextProvider = ({ children }) => {
   const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('Ariana');
+  const [searchTerm, setSearchTerm] = useState('');
 
   // /videos, /search, /images
   const getResults = async (type) => {
@@ -17,8 +17,7 @@ export const ResultContextProvider = ({ children }) => {
       headers: {
         'x-user-agent': 'desktop',
         'x-rapidapi-host': 'google-search3.p.rapidapi.com',
-        'x-rapidapi-key':
-          'd5dce97f06mshe25723e1fc25a06p1b5a71jsnb2b17703f726',
+        'x-rapidapi-key': process.env.REACT_APP_API_KEY,
       },
     });
 
