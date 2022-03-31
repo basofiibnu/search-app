@@ -4,7 +4,7 @@ import Results from './Results';
 
 const Routes = () => {
   return (
-    <div className="p-4">
+    <div className="p-4 pt-0">
       <Switch>
         <Route exact path="/">
           <Redirect to="/search" />
